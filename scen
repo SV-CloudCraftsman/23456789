@@ -1,0 +1,68 @@
+
+Feature: Validating the Registration Form Fields
+
+#this scenario will fail because title of the page is not given (negative test case)
+Scenario: Verify the title “Welcome to JobsWorld” of the page
+Given user is on Registration Form page
+Then verify the title 'Welcome to JobsWorld'
+
+Scenario: the alert box displays the message User Id should not be empty/length be between 5 to 12 upon clicking on the button “Submit” upon wrong or no data entered in the text box
+Given user is on Registration Form page
+When  user left the User id field empty or wrong data entered
+Then  click on submit button
+Then  it will pop-up the alert box displays the message “User Id should not be empty/length be between 5 to 12
+
+
+Scenario: the alert box displays the message Password should not be empty/length be between 7 to 12 upon clicking on the button “Submit” upon wrong or no data entered in the text box
+Given user is on Registration Form page
+When  user left the Password field empty or wrong data entered
+Then  click on submit button
+Then  it will pop-up the alert box displays the message Password should not be empty/length be between 7 to 12
+
+Scenario: the alert box displays the message Name should not be empty and must have alphabet characters only upon clicking on the button “Submit” upon wrong or no data entered in the text box
+Given user is on Registration Form page
+When  user left the Name field empty or wrong data entered
+Then  click on submit button
+Then  it will pop-up the alert box displays the message Name should not be empty and must have alphabet characters only
+
+
+Scenario: the alert box displays the message User address must have alphanumeric characters only upon clicking on the button “Submit” upon wrong or no data entered in the text box
+Given user is on Registration Form page
+When  user left the Address field empty or wrong data entered
+Then  click on submit button
+Then  it will pop-up the alert box displays the message User address must have alphanumeric characters only
+
+
+Scenario: the alert box displays the message Select your country from the list upon clicking on the button “Submit” upon wrong or no data entered in the text box
+Given user is on Registration Form page
+When  user has not chosen any country from dropdown box 
+Then  click on submit button
+Then  it will pop-up the alert box displays the message Select your country from the list
+
+Scenario: the alert box displays the message ZIP code must have numeric characters only upon clicking on the button “Submit” upon wrong or no data entered in the text box
+Given user is on Registration Form page
+When  user has given alphabests or wrong data in ZIP Code field 
+Then  click on submit button
+Then  it will pop-up the alert box displays the message ZIP code must have numeric characters only
+
+
+Scenario: the alert box displays the message You have entered an invalid email address upon clicking on the button “Submit” upon wrong or no data entered in the text box
+Given user is on Registration Form page
+When  user has given wrong format of email id
+Then  click on submit button
+Then  it will pop-up the alert box displays the message You have entered an invalid email address
+
+
+Scenario: the alert box displays the message Please select gender upon clicking on the button “Submit” upon non selection of gender
+Given user is on Registration Form page
+When  user has not selected any gender 
+Then  click on submit button
+Then  it will pop-up the alert box displays the message Please select gender
+
+Scenario: click on submit button 
+Given user is on Registration Form page
+When  user has given all information
+Then  click on submit button
+Then  it will pop-up the alert box displays the message Please select gender
+
+
